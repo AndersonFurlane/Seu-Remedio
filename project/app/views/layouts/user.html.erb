@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <%= stylesheet_link_tag    "user", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="content_center">
+
+    <div id="content_top_welcome">
+      <div id="top_image">
+          <%= image_tag "logo.png" %>
+        </div>
+        <div id="top_welcome">
+          Bem Vindo<br />
+          Anderson Furlane Martins<br />
+          <%= link_to "Sair", destroy_user_session_path, :method =>"delete" %>
+
+        </div>
+    </div>
+    <div id="content_column">
+
+      <div class="column" id="column_left">
+          <div id="column_left_menu">
+                <d1>
+                    <dt>Home</dt><br />
+                    <dt>Lembretes</dt>
+                        <dd>Adicionar Lembretes</dd>
+                        <dd>Editar Lembretes</dd>
+                        <dd>Excluir Lembretes</dd>
+                        <dd>Visualizar Lembretes</dd><br />
+                    <dt>Cadastro</dt>
+                        <dd><%= link_to "Editar Cadastro", :register_edit  %></dd><br />
+                    <dt><%= link_to "Contato", :contato %></dt>
+                </d1>
+            </div>
+        </div>
+
+        <div class="column" id="column_right">
+          <%= yield %>
+        </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
