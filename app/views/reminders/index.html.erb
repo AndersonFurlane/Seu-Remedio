@@ -12,10 +12,12 @@
     <% @reminders.each do |reminder| %>
       <tr>
         <td><%= reminder.name %></td>
-        <td><%= l reminder.time %></td>
+        <td><%= reminder.time %></td>
         <td><%= reminder.days %></td>
         <td><%= l reminder.start_at, format: :short %></td>
-        <td><%= link_to 'Editar', [:edit, reminder] %>
+        <td><%= link_to 'Editar', [:edit, reminder] %></td>
+        <td><%= link_to 'Deletar',  reminder_path(reminder), :data => { :confirm => "Tem certeza?" }, :method => :delete %></td>
       </tr>
     <% end %>
   </tbody>
+</table>

@@ -1,0 +1,51 @@
+<h2>Editar Lembretes</h2>
+<hr />
+
+<%= form_for :reminder, :url => { :action => :update } do |f| %>
+
+  <div id = "field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %><br />
+  </div>
+
+  <div id = "field">
+    Horário:<br />
+    <%= f.time_select :time, default: { hour: '00', minute: '00' } %>
+  </div>
+
+  <div id = "field">
+    Quantidades de Dia: <br />
+    <%= f.text_field :days %><br />
+  </div>
+
+  <div id = "field">
+    Dia de Início:<br />
+    <%= f.date_select :start_at %><br />
+  </div>
+
+  <!--<div id = "field">
+    O lembrete e para você?<br />
+    <#%= f.radio_button :responsible, true, checked: true %>
+    <#%= label :responsible, 'Sim' %>
+    Cadastrar no banco a opção para o responsavel
+    <#%= f.radio_button :responsible, false %>
+    <#%= label :responsible, 'Não' %>
+  </div> -->
+
+  <div id="form_responsible">
+    <!--Nome:<br />
+     <#%= f.text_field :responsible_name %><br />
+    Email:<br />
+    <#%= f.text_field :responsible_email %><br />
+    Telefone:<br />
+    <#%= f.text_field :responsible_phone %><br /> -->
+  </div>
+
+  <br />
+  <%= f.submit "Cadastrar" %>
+
+<% end %>
+
+<script type='text/javascript'>
+  new ViewResponsible();
+</script>

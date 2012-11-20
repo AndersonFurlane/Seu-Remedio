@@ -3,15 +3,13 @@
     <div class="column" id="column_left">
       <div id="column_left_menu">
         <d1>
-          <dt>Home</dt><br />
-          <dt><%= link_to 'Lembretes', reminders_path %></dt>
-          <dd>Adicionar Lembretes</dd>
-          <dd>Editar Lembretes</dd>
-          <dd>Excluir Lembretes</dd>
-          <dd>Visualizar Lembretes</dd><br />
+          <dt><%= link_to 'Home', reminders_path %></dt><br />
+          <dt>Lembretes</dt>
+          <dd><%= link_to 'Adicionar Lembretes', new_reminder_path %></dd>
+          <dd><%= link_to 'Visualizar Lembretes', reminders_path %></dd><br />
           <dt>Cadastro</dt>
-          <dd><%= link_to "Editar Cadastro", :register_edit  %></dd><br />
-          <dt><%= link_to "Contato", :contato %></dt>
+          <dd><%= link_to "Editar Cadastro", edit_user_registration_path  %></dd><br />
+          <dt><%= link_to "Contato", :contact %></dt>
         </d1>
         </div>
       </div>
