@@ -1,7 +1,7 @@
 <h2>Editar Lembretes</h2>
 <hr />
 
-<%= form_for :reminder, :url => { :action => :update } do |f| %>
+<%= form_for @reminder do |f| %>
 
   <div id = "field">
     <%= f.label :name %><br />
@@ -42,7 +42,7 @@
   </div>
 
   <br />
-  <%= f.submit "Cadastrar" %>
+  <%= f.submit "Atualizar" %>
 
 <% end %>
 

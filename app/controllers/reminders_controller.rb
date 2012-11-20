@@ -15,7 +15,7 @@ class RemindersController < ApplicationController
   def update
     @reminder = Reminder.find(params[:id])
     flash[:notice] = 'Post was successfully updated.' if @reminder.update_attributes(params[:reminder])
-    respond_with @reminder, :location => reminders_path
+    respond_with @reminder, location: reminders_path
   end
 
   def edit
