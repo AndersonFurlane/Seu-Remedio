@@ -1,0 +1,12 @@
+<h2>Contato</h2>
+<hr />
+
+<%= form_for @contact do |f| %>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %><br />
+  <%= f.label :email %><br />
+  <%= f.text_field :email %><br />
+  <%= f.label :content %><br />
+  <%= f.text_area :content, rows: 15  %><br />
+  <p><%= f.submit "Enviar" %></p>
+<% end %>

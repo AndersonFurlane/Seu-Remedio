@@ -1,25 +1,29 @@
+<h2>Lembretes</h2>
+<hr />
 <table>
   <thead>
     <tr>
-      <td>Nome</td>
-      <td>Horario</td>
-      <td>Quantidade de Dias</td>
-      <td>Dia inicial</td>
-      <td>Editar</td>
+      <th class ="name">Nome</th>
+      <th class = "hour">Horario</th>
+      <th class = "days">Quantidade de Dias</th>
+      <th class="start_at">Dia inicial</th>
+      <th class="edit">Editar</th>
+      <th class="delete">Deletar</th>
     </tr>
   </thead>
   <tbody>
     <% @reminders.each do |reminder| %>
-      <tr>
+      <tr class="space">
         <td><%= reminder.name %></td>
         <td><%= l reminder.time, format: :custom %></td>
         <td><%= reminder.days %></td>
         <td><%= l reminder.start_at, format: :short %></td>
-        <td><%= link_to 'Editar', [:edit, reminder] %></td>
-        <td><%= link_to 'Deletar',  reminder_path(reminder), :data => {
+        <td class ="font"><%= link_to 'Editar', [:edit, reminder] %></td>
+        <td class ="margin"><%= link_to 'Deletar',  reminder_path(reminder), :data => {
          :confirm => "Tem certeza que deseja deletar?" }, :method => :delete
          %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<hr />

@@ -8,19 +8,18 @@
 </head>
 <body>
 
-  <div id="content_top_login">
-    <div id="content_top_welcome">
+  <div id = "content_index">
+    <div id="content_top_login">
       <%= render partial: 'layouts/session' %>
     </div>
-  </div>
 
-  <div id="content_center">
-    <% if content_for?(:content) %>
-      <%= yield(:content) %>
-    <% else %>
-      <%= yield %>
-    <% end %>
+    <div id="content_center">
+      <% if content_for?(:content) %>
+        <%= yield(:content) %>
+      <% else %>
+        <%= yield %>
+      <% end %>
+    </div>
   </div>
-
 </body>
 </html>

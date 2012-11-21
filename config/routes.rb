@@ -3,9 +3,7 @@ Project::Application.routes.draw do
   root to: 'page#index'
   get "page/index"
 
-  match 'contact' => 'login/contact#index'
-  match 'contact' => 'contact#create', :as => 'contact', :via => :post
-
+  resources :contacts
 
   devise_for :users, :controllers => { :registrations => "users/registrations" }
 
