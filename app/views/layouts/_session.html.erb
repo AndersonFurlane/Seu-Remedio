@@ -8,7 +8,6 @@
     Você possui <%= current_user.reminders.count %> Lembretes<br/>
     <%= link_to "Sair", destroy_user_session_path, :method =>"delete" %>
   </div>
-
 <% else %>
   <div id="top_image">
     <%= link_to image_tag("logo.png"), root_path %>
