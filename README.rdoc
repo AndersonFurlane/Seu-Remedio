@@ -1,3 +1,6 @@
+== Start Server QUEUE=* rake environment resque:work instead of QUEUE=* rake resque:work
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
