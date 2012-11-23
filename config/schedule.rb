@@ -19,7 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 10.minutes do
-  runner "ContactMailer.contact_message"
+every 5.minutes do
   rake "email:send_email"
 end
