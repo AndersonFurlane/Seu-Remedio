@@ -5,7 +5,9 @@ gem 'rspec-rails', '2.12.0', group: [:test, :development]
 gem 'sqlite3'
 gem 'devise'
 gem 'jquery-rails'
-gem "whenever", "~> 0.8.0"
+gem 'resque', '1.23.0'
+gem "resque-scheduler", "~> 2.0.0"
+gem 'rufus-scheduler'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

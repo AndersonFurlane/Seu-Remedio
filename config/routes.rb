@@ -1,5 +1,5 @@
 Project::Application.routes.draw do
-
+  mount Resque::Server.new, at: "/resque"
   root to: 'page#index'
   get "page/index"
 
