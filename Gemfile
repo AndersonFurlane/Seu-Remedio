@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'resque', '1.23.0'
 gem "resque-scheduler", "~> 2.0.0"
 gem 'rufus-scheduler'
+gem 'haml', '3.1.6'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

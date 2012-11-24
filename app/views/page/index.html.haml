@@ -1,0 +1,24 @@
+.introduction
+  = render :partial => 'company'
+
+.form
+  %h1 Cadastre-se
+
+  = form_for users_path do |f|
+
+    = f.label :first_name, 'Nome'
+    = f.text_field :first_name
+
+    = f.label :last_name, 'Sobrenome'
+    = f.text_field :last_name
+
+    = f.label :email, 'Email'
+    = f.text_field :email
+
+    = f.label :password, 'Senha'
+    = f.text_field :password
+
+    = f.label :password_confirmation, 'Confirmação de senha'
+    = f.text_field :password_confirmation
+
+    = f.submit 'Enviar', class: 'send'
