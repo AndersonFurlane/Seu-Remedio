@@ -10,11 +10,12 @@ class RemindersController < ApplicationController
   end
 
   def new
+    @reminder = Reminder.new
   end
 
   def update
     @reminder = Reminder.find(params[:id])
-    flash[:notice] = 'Post was successfully updated.' if @reminder.update_attributes(params[:reminder])
+    flash[:notice] = 'Lembrete alterado com sucesso' if @reminder.update_attributes(params[:reminder])
     respond_with @reminder, location: reminders_path
   end
 
@@ -25,7 +26,8 @@ class RemindersController < ApplicationController
   def create
     @reminder = Reminder.new(params[:reminder])
     @reminder.user_id = current_user[:id]
-    flash[:notice] = 'Reminder registered successfully!' if @reminder.save
+    flash[:notice] = 'Lembrete criado com sucesso' if @reminder.save
+
     respond_with @reminder, :location => reminders_path
   end
 
@@ -35,5 +37,4 @@ class RemindersController < ApplicationController
 
     respond_with @reminder, :location => reminders_path
   end
-
 end

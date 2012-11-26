@@ -6,9 +6,8 @@ Project::Application.routes.draw do
   resources :contacts
 
   devise_for :users, :controllers => { :registrations => "users/registrations" }
-
+  resources :sent_emails
   resources :reminders
   resources :users
-
 
 end

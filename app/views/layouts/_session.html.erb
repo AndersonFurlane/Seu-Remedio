@@ -16,12 +16,12 @@
     <%= form_for(resource, :as => resource_name,
       :url => session_path(resource_name)) do |f| %>
       <%= f.label :email %>
-      <%= f.email_field :email, size: "25" %>
+      <%= f.email_field :email, size: "15" %>
 
       <%= f.label :password %>
-      <%= f.password_field :password, size: "25" %>
+      <%= f.password_field :password, size: "15" %>
 
-      <%= f.submit "Sign in" %>
+      <%= f.submit "Entrar" %>
     <% end %>
   </div>
 <% end %>

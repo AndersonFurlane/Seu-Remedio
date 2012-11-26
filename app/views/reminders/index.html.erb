@@ -3,12 +3,13 @@
 <table>
   <thead>
     <tr>
-      <th class ="name">Nome</th>
-      <th class = "hour">Horario</th>
-      <th class = "days">Quantidade de Dias</th>
-      <th class="start_at">Dia inicial</th>
-      <th class="edit">Editar</th>
-      <th class="delete">Deletar</th>
+      <th>Nome</th>
+      <th>Horario</th>
+      <th>Quant de Dias</th>
+      <th class="days">Dia inicial</th>
+      <th>Editar</th>
+      <th>Deletar</th>
+      <th>Confirmar</th>
     </tr>
   </thead>
   <tbody>
@@ -18,10 +19,11 @@
         <td><%= l reminder.time, format: :custom %></td>
         <td><%= reminder.days %></td>
         <td><%= l reminder.start_at, format: :short %></td>
-        <td class ="font"><%= link_to 'Editar', [:edit, reminder] %></td>
-        <td class ="margin"><%= link_to 'Deletar',  reminder_path(reminder), :data => {
+        <td><%= link_to 'Editar', [:edit, reminder] %></td>
+        <td><%= link_to 'Deletar',  reminder_path(reminder), :data => {
          :confirm => "Tem certeza que deseja deletar?" }, :method => :delete
          %></td>
+         <td><%= link_to 'Confirmando', sent_emails_path %></td>
       </tr>
     <% end %>
   </tbody>

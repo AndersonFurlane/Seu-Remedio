@@ -1,0 +1,160 @@
+@import compass/css3/border-radius
+
+body
+  background-color: #030
+  font-family: Verdana, Geneva, sans-serif
+
+#content_index
+  width: 900px
+  height: 550px
+  margin: 0 auto
+
+/*CONTENT TOP*/
+#content_top
+  width: 900px
+  height: 50px
+
+  /* FORM LOGIN*/
+  #top_login
+    margin: 15px 0px 0px 70px
+    width: 580px
+    float: left
+    font-weight: bolder
+    font-size: 12px
+    color: #FFF
+
+  /*IMAGE*/
+  #top_image
+    float: left
+    height: 50px
+    margin: 0px 0px 0px 30px
+    padding: 0
+    width: 200px
+
+  /*USER LOGGED*/
+  #top_welcome
+    color: #FFF
+    display: block
+    font-size: 10px
+    font-weight: bolder
+    float: right
+    margin: 4px 40px 0px 0px
+
+    a
+      color: #66FF33
+      text-decoration: none
+
+/*CONTENT CENTER*/
+#content_center
+  +border-radius(30px)
+  background-color: #FFF
+  height: 500px
+  margin: 0 auto
+  width: 900px
+
+  /*INSTRUCTION SITE INDEX*/
+  .introduction
+    font-size: 12px
+    float: left
+    margin: 20px 0px 0px 40px
+    text-align: justify
+    width: 350px
+
+  h1, h2
+    color: #000
+    font-size: 30px
+    font-weight: bold
+    margin-bottom: 5px
+    text-align: center
+
+    h2
+      margin-top: 10px
+
+  p
+    font-size: 13px
+    line-height: 20px
+    text-align: justify
+
+  /*REGISTRATION FORM INDEX*/
+  .form
+    float: left
+    margin: 20px 0px 0px 40px
+    width: 370px
+
+    hr
+      border: solid 4px #330
+
+    input
+      width: 370px
+      margin-bottom: 5px
+
+    .send
+      background-color: #003300
+      border: medium solid #003300
+      color: #FFF
+      float: right
+      width: 100px
+
+  #menu
+    float: left
+    font-size: 15px
+    font-weight: bolder
+    height: 320px
+    margin: 85px 13px 0px 20px
+    width: 180px
+
+    dt
+      color: #330
+
+    a
+      color:  #030
+      text-decoration: none
+
+    a:hover
+      color: #960
+      text-decoration: none
+
+
+  #user_logged
+    float: left
+    height: 420px
+    margin: 30px 0px 0px 15px
+    width: 650px
+
+    a
+      color: #030
+      font-weight: bold
+      text-decoration: none
+
+    h2
+      text-align: left
+      font-size: 30px
+
+    hr
+      border: solid 5px #330
+
+    th
+      font-weight: bold
+
+    td, th
+      text-align: center
+      padding-right: 20px
+      line-height: 20px
+
+    tr
+      font-size: 12px
+
+    .days
+      width: 110px
+
+    .space
+      line-height: 17px
+
+    .button
+      background-color: #003300
+      border: medium solid #003300
+      color: #FFF
+      width: 100px
+
+    .bar
+      overflow: scroll

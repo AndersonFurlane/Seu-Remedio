@@ -28,3 +28,9 @@ Reminder.create(
   start_at: Date.today,
   user: user
 )
+
+SentEmail.create(
+  :time Time.now,
+  :completed nil,
+  :reminder_id 1
+)

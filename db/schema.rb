@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121117190550) do
+ActiveRecord::Schema.define(:version => 20121125231556) do
 
   create_table "reminders", :force => true do |t|
     t.string  "name"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(:version => 20121117190550) do
     t.integer "days"
     t.integer "user_id"
     t.date    "start_at"
+  end
+
+  create_table "sent_emails", :force => true do |t|
+    t.time     "time"
+    t.boolean  "completed"
+    t.integer  "reminder_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

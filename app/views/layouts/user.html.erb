@@ -1,23 +1,20 @@
 <% content_for(:content) do %>
-  <div id="content_column">
-    <div class="column" id="column_left_menu">
-      <d1>
-        <dt class="menu_user_link"><%= link_to 'Home', reminders_path %>
-          </dt><br />
-        <dt class="menu_user_dt">Lembretes</dt>
-        <dd class="menu_user_link"><%= link_to 'Adicionar Lembretes', new_reminder_path %></dd>
-        <dd class="menu_user_link"><%= link_to 'Visualizar Lembretes', reminders_path %></dd><br />
-        <dt class="menu_user_dt">Cadastro</dt>
-        <dd class="menu_user_link"><%= link_to "Editar Cadastro", edit_user_registration_path  %></dd><br />
-        <dt class="menu_user_link"><%= link_to "Contato", new_contact_path %></dt>
-      </d1>
-    </div>
+  <div id="menu">
+    <d1>
+      <dt><%= link_to 'Home', reminders_path %></dt><br />
+      <dt>Lembretes</dt>
+      <dd><%= link_to 'Adicionar Lembretes', new_reminder_path %></dd>
+      <dd><%= link_to 'Visualizar Lembretes', reminders_path %></dd><br />
+      <dt>Cadastro</dt>
+      <dd><%= link_to "Editar Cadastro", edit_user_registration_path  %></dd><br />
+      <dt><%= link_to "Contato", new_contact_path %></dt>
+    </d1>
+  </div>
 
-      <div class="column" id="column_right_login_index">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-        <%= yield %>
-      </div>
+  <div id="user_logged">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
   </div>
 <% end %>
 <%= render template: '/layouts/application' %>
