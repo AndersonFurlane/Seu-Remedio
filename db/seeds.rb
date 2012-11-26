@@ -30,7 +30,7 @@ Reminder.create(
 )
 
 SentEmail.create(
-  :time Time.now,
-  :completed nil,
-  :reminder_id 1
+  time: Time.now,
+  completed: nil,
+  reminder_id: 1
 )

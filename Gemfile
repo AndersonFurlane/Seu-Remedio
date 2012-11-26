@@ -19,11 +19,18 @@ end
 group :test do
   gem 'guard-migrate', '0.1.0'
   gem 'guard-bundler', '1.0.0'
-  gem 'rb-inotify', '0.8.8'
   gem 'capybara', '2.0.1'
   gem 'guard-rspec', '2.1.1'
   gem 'rb-fsevent', '0.9.1'
   gem 'factory_girl', '4.1.0'
   gem 'ffaker', '1.15.0'
+
+  if RUBY_PLATFORM.downcase.include?('darwin')
+    gem 'rb-fsevent', '0.9.1'
+  end
+
+  if RUBY_PLATFORM.downcase.include?('linux')
+    gem 'rb-inotify', '0.8.8'
+  end
 end
 
