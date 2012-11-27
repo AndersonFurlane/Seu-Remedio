@@ -7,9 +7,4 @@ class SentEmail < ActiveRecord::Base
 
   # validations
   validates_presence_of :time, :reminder
-
-  def save_send(params)
-    flash[:notice] = 'Remedio Confirmado' if params.save
-  end
-
 end

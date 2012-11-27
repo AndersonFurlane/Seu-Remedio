@@ -1,12 +1,9 @@
-class SentEmailsController < ApplicationController
+class SentEmailsController < BaseController
 
-  layout 'user'
-  respond_to :html, :js
-
-  before_filter :authenticate_user!
+  before_filter :load_reminder_user
 
   def index
-    @sent_emails = SentEmail.all
+    @sent_emails = SentEmail.scoped
   end
 
   def show
@@ -28,6 +25,13 @@ class SentEmailsController < ApplicationController
   def create
     @sent_email = SentEmail.new(params[:sent_email])
     flash[:notice] = 'Remedio registrado com sucesso' if @sent_email.save
+  end
+
+  protected
+
+  def load_reminder
+    @reminders = Reminder.all
+   p current_user
   end
 
 end

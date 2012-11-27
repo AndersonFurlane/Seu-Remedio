@@ -1,6 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
-  layout 'user'
+  layout 'application'
   before_filter :authenticate_user!
 
   def new

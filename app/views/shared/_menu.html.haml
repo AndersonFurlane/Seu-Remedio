@@ -1,0 +1,19 @@
+#menu
+  %d1
+    %dt
+      = link_to 'Home', reminders_path
+    %br
+    %dt
+      Lembretes
+      %dd
+        = link_to 'Adicionar Lembretes', new_reminder_path
+      %dd
+        = link_to 'Visualizar Lembretes', reminders_path
+      %br
+    %dt
+      Cadastro
+      %dd
+        = link_to "Editar Cadastro", edit_user_registration_path
+      %br
+    %dt
+      = link_to "Contato", new_contact_path

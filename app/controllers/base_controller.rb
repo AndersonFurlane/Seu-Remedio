@@ -1,4 +1,8 @@
 class BaseController < ApplicationController
 
-  layout 'user'
+  layout 'application'
+
+  before_filter :authenticate_user!
+
+  respond_to :html
 end

@@ -1,9 +1,4 @@
-class RemindersController < ApplicationController
-
-  layout 'user'
-  respond_to :html, :js
-
-  before_filter :authenticate_user!
+class RemindersController < BaseController
 
   def index
     @reminders = current_user.reminders

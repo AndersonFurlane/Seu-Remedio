@@ -1,0 +1,34 @@
+= render partial: 'shared/menu'
+
+#user_logged
+  %h2 Lembretes
+  %hr
+  .bar
+    %table
+      %thead
+        %tr
+          %th Nome
+          %th Horário
+          %th Quants de Dias
+          %th.days Dia inicial
+          %th Editar
+          %th Deletar
+          %th Confirmar
+      %tbody
+        - @reminders.each do |reminder|
+          %tr.space
+            %td
+              = reminder.name
+            %td
+              = l reminder.time, format: :custom
+            %td
+              = reminder.days
+            %td
+              = l reminder.start_at, format: :short
+            %td
+              = link_to 'Editar', [:edit, reminder]
+            %td
+              = link_to 'Deletar',  reminder_path(reminder), :data => { :confirm => "Tem certeza que deseja deletar?" }, method: :delete
+            %td
+              = link_to 'Confirmando', sent_emails_path
+  %hr

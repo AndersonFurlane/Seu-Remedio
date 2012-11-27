@@ -1,0 +1,29 @@
+= render partial: 'shared/menu'
+
+#user_logged
+  %h2 Confirmação
+  %hr
+  .bar
+    %table
+      %thead
+        %tr
+          %th Nome
+          %th Hora do Remédio
+          %th Quant de Dias
+          %th Horário do Email
+          %th Você tomou o remédio?
+
+      %tbody
+        - @sent_emails.each do |sent|
+          - reminder = search_reminders(sent.reminder_id)
+          %tr
+            %td
+              = reminder.name
+            %td
+              = l sent.time, format: :custom
+            %td
+              = reminder.days
+            %td
+              = l sent.time, format: :custom
+            %td
+              = check_medication(sent)
