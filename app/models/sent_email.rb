@@ -7,6 +7,6 @@ class SentEmail < ActiveRecord::Base
   attr_accessible :time, :completed, :reminder_id
 
   # validations
-  validates_presence_of :time, :reminder
+  validates_presence_of :time, :reminder_id
 
 end

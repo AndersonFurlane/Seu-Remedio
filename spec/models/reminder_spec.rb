@@ -1,7 +1,7 @@
  require 'spec_helper'
 
 describe 'Reminder' do
-  it 'should have a valid factory' do
+  xit 'should have a valid factory' do
     FactoryGirl.create(:reminder).should be_valid
   end
   it 'should have name' do
