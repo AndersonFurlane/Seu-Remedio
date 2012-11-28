@@ -1,4 +1,5 @@
 class ContactMailer < ActionMailer::Base
+
    default :from => 'remediolembrete@gmail.com'
   def contact_message(contact)
     @contact = contact
@@ -9,4 +10,5 @@ class ContactMailer < ActionMailer::Base
     @params = params
     mail(to: params.email, subject: "Lembrete - Seu Remendio", body: params.content)
   end
+
 end

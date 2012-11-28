@@ -1,4 +1,5 @@
 class Reminder < ActiveRecord::Base
+
   # associations
   belongs_to :user
   has_many :sent_emails

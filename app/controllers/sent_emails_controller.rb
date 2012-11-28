@@ -1,9 +1,8 @@
+#encoding: utf-8
 class SentEmailsController < BaseController
 
-  before_filter :load_reminder_user
-
   def index
-    @sent_emails = SentEmail.scoped
+    @sent_emails = SentEmail.all
   end
 
   def show
@@ -14,7 +13,7 @@ class SentEmailsController < BaseController
     @sent_email = SentEmail.find(params[:id])
     @sent_email.completed = true
     @sent_email.reminder.days = @sent_email.reminder.days - 1
-    flash[:notice] = 'Remedio Confirmado' if @sent_email.update_attributes(params[:sent_email])
+    flash[:notice] = 'Remédio Confirmado' if @sent_email.update_attributes(params[:sent_email])
     respond_with @sent_email, location: reminders_path
   end
 
@@ -24,14 +23,7 @@ class SentEmailsController < BaseController
 
   def create
     @sent_email = SentEmail.new(params[:sent_email])
-    flash[:notice] = 'Remedio registrado com sucesso' if @sent_email.save
-  end
-
-  protected
-
-  def load_reminder
-    @reminders = Reminder.all
-   p current_user
+    flash[:notice] = 'Remédio registrado com sucesso' if @sent_email.save
   end
 
 end

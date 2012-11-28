@@ -1,4 +1,5 @@
 class SentEmail < ActiveRecord::Base
+
   # associations
   belongs_to :reminder
 
@@ -7,4 +8,5 @@ class SentEmail < ActiveRecord::Base
 
   # validations
   validates_presence_of :time, :reminder
+
 end

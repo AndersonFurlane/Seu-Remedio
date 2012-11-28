@@ -32,4 +32,5 @@ class RemindersController < BaseController
 
     respond_with @reminder, :location => reminders_path
   end
+
 end
