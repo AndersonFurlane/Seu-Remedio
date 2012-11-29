@@ -6,5 +6,7 @@ FactoryGirl.define do
     time { Time.now }
     days { rand(10) + 1 }
     start_at { Date.today }
+
+    user
   end
 end

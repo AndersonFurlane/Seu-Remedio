@@ -6,7 +6,6 @@ class SentEmailsController < BaseController
   end
 
   def show
-    @sent_emails = SentEmail.find(params[:id])
   end
 
   def edit
@@ -18,12 +17,9 @@ class SentEmailsController < BaseController
   end
 
   def new
-    @sent_emails = SentEmail.new
   end
 
   def create
-    @sent_email = SentEmail.new(params[:sent_email])
-    flash[:notice] = 'Remédio registrado com sucesso' if @sent_email.save
   end
 
 end

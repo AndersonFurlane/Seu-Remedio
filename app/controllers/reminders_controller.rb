@@ -29,7 +29,6 @@ class RemindersController < BaseController
   def destroy
     @reminder = Reminder.find(params[:id])
     @reminder.destroy
-
     respond_with @reminder, :location => reminders_path
   end
 

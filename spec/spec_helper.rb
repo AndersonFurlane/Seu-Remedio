@@ -36,4 +36,5 @@ RSpec.configure do |config|
   #     --seed 1234
   #config.order = "random"
   FactoryGirl.find_definitions
+  config.include Devise::TestHelpers, :type => :controller
 end

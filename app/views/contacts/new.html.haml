@@ -5,6 +5,14 @@
   %hr
 
   = form_for @contact do |f|
+    - if @contact.errors.any?
+      #error_explanation
+        %p
+          = pluralize(@contact.errors.count, " error") +  " ao enviar a mensagem:"
+        %ul
+          - @contact.errors.full_messages.each do |msg|
+            %li
+              = msg
     Nome:
     %br
     = f.text_field :name

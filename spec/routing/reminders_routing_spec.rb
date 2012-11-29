@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'routing reminders' do
+
   it 'routes to #index' do
     get('/reminders').should route_to('reminders#index')
   end
@@ -19,6 +20,14 @@ describe 'routing reminders' do
 
   it 'routing to #update' do
     put('/reminders/1').should route_to('reminders#update', id:'1')
+  end
+
+  it 'routing to #destroy' do
+    delete('/reminders/1').should route_to('reminders#destroy', id:'1')
+  end
+
+  it 'no routing to #show' do
+    get('/reminders/1').should_not route_to('reminders#show', id: '1')
   end
 
 end

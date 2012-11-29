@@ -1,4 +1,12 @@
 = form_for(@reminder) do |f|
+  - if @reminder.errors.any?
+    #error_explanation
+      %p
+        = pluralize(@reminder.errors.count, " error") +  " ao salvar lembrete:"
+      %ul
+        - @reminder.errors.full_messages.each do |msg|
+          %li
+            = msg
   Nome:
   %br
   = f.text_field :name
